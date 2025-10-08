@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitaler Adventskalender 🎄</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 3. Design: Festlicher, fixierter Hintergrund */
+        body {
+            /* Platzhalter-URL für ein weihnachtliches Hintergrundbild */
+            background-image: url('https://images.unsplash.com/photo-1549488344-9d545f739775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-attachment: fixed; /* Hintergrundbild fixieren */
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        /* Basis-Stil für die Türchen, um die Transformation zu ermöglichen */
+        .door {
+            transition: all 0.3s ease-in-out; /* Weiche Übergänge für Hover-Effekte */
+        }
+
+        /* Interaktiver Zustand: Entsperrt (durch JS hinzugefügt) */
+        .unlocked:hover {
+            transform: scale(1.05); /* Vergrößerung beim Hovern */
+        }
+    </style>
+</head>
+<body>
+    <div id="calendar-container" class="max-w-7xl mx-auto p-4 md:p-10 bg-white bg-opacity-95 rounded-2xl shadow-2xl">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-center mb-10 text-red-700 tracking-wider">
+            🎁 Mein Digitaler Adventskalender 🎅
+        </h1>
+        
+        <div id="calendar-grid" class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6">
+
+            <div id="door-1" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">1</div>
+            <div id="door-2" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">2</div>
+            <div id="door-3" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">3</div>
+            <div id="door-4" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">4</div>
+            <div id="door-5" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">5</div>
+            <div id="door-6" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">6</div>
+            <div id="door-7" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">7</div>
+            <div id="door-8" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">8</div>
+            <div id="door-9" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">9</div>
+            <div id="door-10" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">10</div>
+            <div id="door-11" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">11</div>
+            <div id="door-12" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">12</div>
+            <div id="door-13" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">13</div>
+            <div id="door-14" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">14</div>
+            <div id="door-15" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">15</div>
+            <div id="door-16" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">16</div>
+            <div id="door-17" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">17</div>
+            <div id="door-18" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">18</div>
+            <div id="door-19" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">19</div>
+            <div id="door-20" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">20</div>
+            <div id="door-21" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">21</div>
+            <div id="door-22" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">22</div>
+            <div id="door-23" class="door bg-red-700 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">23</div>
+            <div id="door-24" class="door bg-green-600 text-white aspect-square rounded-xl shadow-xl flex items-center justify-center text-4xl sm:text-5xl font-black opacity-50 cursor-not-allowed">24</div>
+        </div>
+
+        <p id="date-info" class="text-center mt-10 text-xl font-bold text-gray-700"></p>
+    </div>
+    
+    <script>
+        // Link-Verwaltung: Zentrales Objekt für alle Links (Schlüssel: Tag, Wert: URL)
+        const calendarLinks = {
+            1: "https://www.beispiel.de/tuer1-gruss",
+            2: "https://www.youtube.com/watch?v=kYv_6yLg5xM",
+            3: "https://www.beispiel.de/rezept3",
+            4: "https://www.google.com/search?q=weihnachtsgedichte",
+            5: "https://www.beispiel.de/tuer5",
+            6: "https://de.wikipedia.org/wiki/Nikolaus_von_Myra",
+            7: "https://www.beispiel.de/tuer7",
+            8: "https://www.beispiel.de/tuer8",
+            9: "https://www.beispiel.de/tuer9",
+            10: "https://www.beispiel.de/tuer10",
+            11: "https://www.beispiel.de/tuer11",
+            12: "https://www.beispiel.de/tuer12",
+            13: "https://www.beispiel.de/tuer13",
+            14: "https://www.beispiel.de/tuer14",
+            15: "https://www.beispiel.de/tuer15",
+            16: "https://www.beispiel.de/tuer16",
+            17: "https://www.beispiel.de/tuer17",
+            18: "https://www.beispiel.de/tuer18",
+            19: "https://www.beispiel.de/tuer19",
+            20: "https://www.beispiel.de/tuer20",
+            21: "https://www.beispiel.de/tuer21",
+            22: "https://www.beispiel.de/tuer22",
+            23: "https://www.beispiel.de/tuer23",
+            24: "https://www.beispiel.de/tuer24-heiligabend"
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Datums-Logik: Ermittle das aktuelle Datum
+            const today = new Date();
+            // getMonth gibt 0 (Januar) bis 11 (Dezember) zurück, daher + 1
+            const currentMonth = today.getMonth() + 1; 
+            const currentDay = today.getDate(); // Aktueller Tag des Monats (1 bis 31)
+
+            // WICHTIG: Prüfen, ob der Monat Dezember ist (Monat 12)
+            const isDecember = (currentMonth === 12);
+
+            // Hinweis für den Benutzer anzeigen
+            const dateInfo = document.getElementById('date-info');
+            if (isDecember) {
+                dateInfo.textContent = `Heute ist der ${currentDay}. Dezember. Die Türchen bis ${currentDay} sind freigeschaltet.`;
+            } else {
+                // Testmodus-Hinweis: Alle Türchen freischalten, wenn nicht Dezember
+                dateInfo.textContent = `Hinweis: Es ist nicht Dezember (Monat ${currentMonth}). Alle Türchen sind zum Testen freigeschaltet.`;
+            }
+
+            // Schleife durch alle 24 Tage
+            for (let day = 1; day <= 24; day++) {
+                const doorElement = document.getElementById(`door-${day}`);
+                
+                if (doorElement) {
+                    // Bedingung für die Freischaltung:
+                    // (Es ist Dezember UND der Tag ist kleiner oder gleich dem aktuellen Tag) ODER (Es ist NICHT Dezember = Testmodus)
+                    const isUnlocked = isDecember ? (day <= currentDay) : true;
+
+                    if (isUnlocked) {
+                        // Türchen ist freigeschaltet (aktuell/vergangen oder Testmodus)
+                        
+                        // 1. Gesperrt-Stylings entfernen (opacity-50, cursor-not-allowed)
+                        doorElement.classList.remove('opacity-50', 'cursor-not-allowed');
+                        
+                        // 2. Interaktive Stylings hinzufügen (volle Deckkraft, Hover-Effekt)
+                        doorElement.classList.add('unlocked', 'cursor-pointer');
+                        
+                        // 3. Klick-Event-Listener hinzufügen
+                        doorElement.addEventListener('click', () => {
+                            const url = calendarLinks[day];
+                            if (url) {
+                                // Link in einem neuen Browser-Tab öffnen (window.open(url, '_blank'))
+                                window.open(url, '_blank');
+                            }
+                        });
+
+                    } else {
+                        // Türchen ist gesperrt (zukünftiges Datum im Dezember)
+                        // Voreingestellte Stylings (opacity-50, cursor-not-allowed) bleiben erhalten.
+                        // Es wird kein Event-Listener hinzugefügt, sodass das Türchen nicht reagiert.
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
